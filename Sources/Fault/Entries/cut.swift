@@ -70,7 +70,7 @@ extension Fault {
                 blackboxModules = try Module.getModules(in: blackboxModels, filter: Set(blackbox))
             }
             
-            var sclConfig = SCLConfiguration(dffMatches: [DFFMatch(name: "DFFSR,DFFNEGX1,DFFPOSX1", clk: "CLK", d: "D", q: "Q")])
+            var sclConfig = SCLConfiguration(dffMatches: [DFFMatch(name: "DFFSR,DFFNEGX1,DFFPOSX1,DFFARN_X2X2_9p_svt", clk: "CLK", d: "d", q: "q")])
             
             if let sclConfigPath = self.sclConfig {
                 guard let sclConfigYML = try? String(contentsOfFile: sclConfigPath) else {
