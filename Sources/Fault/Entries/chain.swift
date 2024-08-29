@@ -541,7 +541,7 @@ extension Fault {
             }
 
             // Required options validation
-            var sclConfig = SCLConfiguration(dffMatches: [DFFMatch(name: "DFFSR,DFFNEGX1,DFFPOSX1", clk: "CLK", d: "D", q: "Q")])
+            var sclConfig = SCLConfiguration(dffMatches: [DFFMatch(name: "DFFSR,DFFNEGX1,DFFPOSX1,DFFARN_X2X2_9p_svt", clk: "CLK", d: "d", q: "q")])
             if let sclConfigPath = self.sclConfig {
                 guard let sclConfigYML = File.read(sclConfigPath) else {
                     throw ValidationError("File not found: \(sclConfigPath)")
